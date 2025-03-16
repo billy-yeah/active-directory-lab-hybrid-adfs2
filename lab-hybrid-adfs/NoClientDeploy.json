@@ -1,10 +1,10 @@
-﻿{
+{
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "assetLocation": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/Azure-Samples/active-directory-lab-hybrid-adfs/master/lab-hybrid-adfs/",
+      "defaultValue": "https://raw.githubusercontent.com/billy-yeah/active-directory-lab-hybrid-adfs/main/lab-hybrid-adfs/",
       "metadata": { "description": "This is the location in which all the linked templates are stored." }
     },
     "adminUsername": {
@@ -65,8 +65,8 @@
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "Standard_A2_v2",
-      "allowedValues": [ "Standard_A1_v2", "Standard_A2_v2", "Standard_A4_v2", "Standard_A2M_v2", "Standard_A4M_v2", "Standard_A4_v2", "Standard_D2_v2", "Standard_D3_v2", "Standard_D11_v2", "Standard_D12_v2", "Standard_B2ms", "Standard_B2s", "Standard_B4ms" ],
+      "defaultValue": "Standard_B2as_v2",
+      "allowedValues": [ "Standard_A1_v2", "Standard_B2as_v2", "Standard_A4_v2", "Standard_A2M_v2", "Standard_A4M_v2", "Standard_A4_v2", "Standard_D2_v2", "Standard_D3_v2", "Standard_D11_v2", "Standard_D12_v2", "Standard_B2ms", "Standard_B2s", "Standard_B4ms" ],
       "metadata": { "description": "Select a VM SKU (please ensure the SKU is available in your selected region)." }
     },
     "virtualNetworkAddressRange": {
@@ -125,7 +125,7 @@
     "cliSubnetName": "[concat('clientSubnet', parameters('deploymentNumber'))]",
     "imageOffer": "WindowsServer",
     "imagePublisher": "MicrosoftWindowsServer",
-    "imageSKU": "2012-R2-Datacenter",
+    "imageSKU": "2022-datacenter-azure-edition",
     "publicIPAddressDNSName": "[tolower(concat(variables('companyNamePrefix'),parameters('deploymentNumber'),'-adfs'))]",
     "rdpIPAddressDNSName": "[tolower(concat(variables('companyNamePrefix'),'-adfs-rdp'))]",
     "storageAccountType": "Standard_LRS",
