@@ -1,4 +1,4 @@
-﻿$startTime=Get-Date
+$startTime=Get-Date
 Write-Host "Beginning deployment at $starttime"
 
 Import-Module Azure -ErrorAction SilentlyContinue
@@ -13,8 +13,8 @@ Import-Module Azure -ErrorAction SilentlyContinue
     $RGName                  = "<YOUR RESOURCE GROUP>"
     $DeployRegion            = "<SELECT AZURE REGION>"
 
-    $Branch                  = "master"
-    $AssetLocation           = "https://raw.githubusercontent.com/Azure-Samples/active-directory-lab-hybrid-adfs/$Branch/lab-hybrid-adfs/"
+    $Branch                  = "main"
+    $AssetLocation           = "https://raw.githubusercontent.com/billy-yeah/active-directory-lab-hybrid-adfs/$Branch/lab-hybrid-adfs/"
 
     $userName                = "<AD ADMINISTRATOR LOGIN>"
     $secpasswd               = “<AD ADMINISTRATOR PASSWORD>”
@@ -30,7 +30,7 @@ Import-Module Azure -ErrorAction SilentlyContinue
     # ClientsToDeploy, array, possible values: "7","8","10-1607","10-1511","10-1703"
     # Examples: Single Win7 VM = @("7")
     #           Two Win7, one Win10 Creators = "7","7","10-1703"
-    $clientsToDeploy         = @("7")
+    $clientsToDeploy         = @("11")
     $RDPWidth                = 1920
     $RDPHeight               = 1080
 
